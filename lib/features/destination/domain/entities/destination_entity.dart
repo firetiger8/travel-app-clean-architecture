@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:equatable/equatable.dart';
 
 class DestinationEntity extends Equatable {
@@ -24,6 +25,22 @@ class DestinationEntity extends Equatable {
     required this.images,
     required this.facilities,
   });
+
+  @override
+  List<Object> get props {
+    return [
+      id,
+      name,
+      category,
+      cover,
+      rate,
+      rateCount,
+      location,
+      description,
+      images,
+      facilities,
+    ];
+  }
 }
 
 void main(List<String> args) {
