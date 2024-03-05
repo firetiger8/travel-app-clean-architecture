@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:equatable/equatable.dart';
 
 class DestinationEntity extends Equatable {
@@ -13,7 +12,7 @@ class DestinationEntity extends Equatable {
   final List<String> images;
   final List<String> facilities;
 
-  DestinationEntity({
+  const DestinationEntity({
     required this.id,
     required this.name,
     required this.category,
@@ -41,34 +40,4 @@ class DestinationEntity extends Equatable {
       facilities,
     ];
   }
-}
-
-void main(List<String> args) {
-  DestinationEntity dest1 = DestinationEntity(
-    id: '1',
-    name: 'name',
-    category: 'category',
-    cover: 'cover',
-    rate: 1,
-    rateCount: 1,
-    location: 'location',
-    description: 'description',
-    images: [''],
-    facilities: [''],
-  );
-
-  DestinationEntity dest2 = DestinationEntity(
-    id: '1',
-    name: 'name',
-    category: 'category',
-    cover: 'cover',
-    rate: 1,
-    rateCount: 1,
-    location: 'location',
-    description: 'description',
-    images: [''],
-    facilities: [''],
-  );
-
-  print(dest1 == dest2);
 }
