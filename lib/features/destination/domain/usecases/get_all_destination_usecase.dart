@@ -4,11 +4,11 @@ import '../../../../core/error/failures.dart';
 import '../entities/destination_entity.dart';
 import '../repositories/destination_repository.dart';
 
-class GetTopDestinationUseCase {
+class GetAllDestinationUseCase {
   final DestinationRepository _repository;
 
-  GetTopDestinationUseCase(this._repository);
+  GetAllDestinationUseCase(this._repository);
   Future<Either<Failure, List<DestinationEntity>>> call() {
-    return _repository.top();
+    return _repository.all();
   }
 }
